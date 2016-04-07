@@ -14,4 +14,7 @@ RUN mkdir -p /opt/samba/share /opt/samba/user /opt/samba/dfs
 RUN chmod 777 /opt/samba/share /opt/samba/user /opt/samba/dfs
 
 COPY smb.conf /etc/samba/smb.conf
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
 
